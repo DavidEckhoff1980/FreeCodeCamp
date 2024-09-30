@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="styles.css" />
+</html>
+  <body>
+    <h1 id="title">RSVP</h1>
+    <p id="description">Adult Dinner Party (Must be 21+)</p>
+    <form id="survey-form">
+      <fieldset>
+        <label for="dropdown">Are you able to attend?
+          <select id="dropdown" name="dropdown">
+            <option value="">(select one)</option>
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">Maybe</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Information</legend>
+        <label id="name-label" for="name-label">Name: <input id="name" name="name" type="text" placeholder="Full Name" required /></label>
+        <label id="email-label" for="email">Email: <input id="email" name="email" type="email" placeholder="Enter a valid email address" required /></label>
+        <label id="number-label" for="number">Age: <input id="number" type="number" name="number" placeholder="21+"  min="21" max="120" /></label>
+        <label for="allergies">Food Allergies: <input id="allergies" name="allergies" type="text" placeholder="Optional" /></label>
+      </fieldset>
+      <fieldset>
+        <legend>Main Course</legend>
+        <input id="brisket" type="checkbox" name="main-course" value="brisket" checked> <label for="brisket">Brisket Bourguignon</label>
+        <input id="lobster" type="checkbox" name="main-course" value="lobster"> <label for="lobster">Lobster Gnudi</label>
+        <input id="chicken" type="checkbox" name="main-course" value="chicken"> <label for="chicken">Chicken Marsala</label>
+      </fieldset>
+      <fieldset>
+        <legend>Dessert Course</legend>
+        <input id="creme" type="radio" name="dessert-course" value="creme" checked> <label for="creme">Crème Brûlée</label>
+        <input id="bananas" type="radio" name="dessert-course" value="bananas"> <label for="bananas">Bananas Flambé</label>
+        <input id="berry" type="radio" name="dessert-course" value="berry"> <label for="berry">Mixed Berry Compote</label>
+      </fieldset>
+      <fieldset>
+        <label for="comments">Additional comments:
+          <textarea id="comments" name="comments" rows="2" cols="30" placeholder="Additional comments:"></textarea></label>
+      </fieldset>
+      <input id="submit" type="submit" value="Submit" />
+    </form>
+  </body>
